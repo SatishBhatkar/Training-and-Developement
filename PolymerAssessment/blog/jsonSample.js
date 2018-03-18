@@ -1,22 +1,6 @@
-var modal= document.getElementById("simpleModal");
-var modalBtn= document.getElementById("modalBtn");
-var closeBtn= document.getElementById("closeBtn")
-
-//Listen for click
-modalBtn.addEventListener('click', openModal)
-function openModal() {
-    modal.style.display='block';
-}
-console.log(closeBtn);
-closeBtn.addEventListener('click', closeModal)
-function closeModal(){
-    console.log('in close');
-    modal.style.display='none';
-}
-
 var resultDiv = document.getElementById("results");
 
-var newsURL = "http://localhost:81/testjs/data.json";
+var newsURL = "http://localhost:63342/PolymerAssessment/blog/Data.json";
 
 
 var xmlhttp;
@@ -33,7 +17,9 @@ xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         response = JSON.parse(xmlhttp.responseText);
         //here you can manipulate the response as you wish, for example you can:
-        var myData = response['JsonProjectIDResult'];
+        console.log(response);
+        var myData = response['employee'];
+
         // myData now is an array of the json object
         var html = '<ul>';
         for(var prop in myData ) {
