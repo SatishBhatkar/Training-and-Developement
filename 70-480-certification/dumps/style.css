@@ -1,0 +1,21 @@
+h4{
+    color: powderblue;
+}
+.headline{
+    color: red;
+}
+
+article{
+    color: black;
+    font-style: normal;
+}
+
+aside h4{
+    font-style: italic !important;
+    color: yellow;
+}
+
+aside h4{
+    font-style: normal;
+    color: sienna;
+}
